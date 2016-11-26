@@ -9,10 +9,6 @@
 class Home extends CI_Controller
 {
     public function index(){
-        echo "Hello";
-    }
-    public function x()
-    {
-        echo "hell";
+        $this->load->view('home_view');
     }
 }
