@@ -6,7 +6,7 @@
  * Date: 27/11/2559
  * Time: 11:02
  */
-class Categorie_model
+class Categorie_model extends CI_Model
 {
 
 }
