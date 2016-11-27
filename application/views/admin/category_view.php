@@ -19,25 +19,26 @@
                     <th> ชื่อหมวดหมู่</th>
                     <th> จักการ</th>
 
-                    <?php if ($categories->num_rows > 0) {
+                    <?php if ($categories->num_rows () > 0) {
                         foreach ($categories->result() as $category) {
                             ?>
-                            <th>
+                            <tr>
                             <td>1</td>
                             <td><?php echo $category->name ?> </td>
+
                             <td>
-                            <td>
-                                <a href="#" class="btn btn-xs btn-warning">
+                                <a href="<?php echo base_url('admin/edit_categoriry/'.$category->category_id)?>" class="btn btn-xs btn-warning">
                                     <i class="fa fa-edit"> </i> แก้ไข
                                 </a>
-                                <a href="#" class="btn btn-xs btn-danger">
+                                <a href="<?php echo base_url('admin/delete_categoriry/'.$category->category_id)?>"
+
+                                   class="btn btn-xs btn-danger">
                                     <i class="fa fa-times"> </i> ลบ
                                 </a>
 
 
                             </td>
-                            </td>
-                            </th>
+                            </tr>
 
                         <?php }
                     } else { ?>

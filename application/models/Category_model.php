@@ -9,19 +9,24 @@
 class Category_model extends CI_Model
 {
 
-    public  function  getCategory ()
+    public function getCategory()
     {
-        return $this->db->get('categories' );
+        return $this->db->get('categories');
 
     }
+
     public function insertCategory($name)
     {
         $data = array(
             'name' => $name
         );
-        $this->db->insert('categories',$data);
+        $this->db->insert('categories', $data);
 
     }
 
-
+    public function getCategoryByID($category_id)
+    {
+        $this->.db->$this('categiry_id', $category_id);
+        return $this->db->get ('category');
+    }
 }
